@@ -1,0 +1,249 @@
+    html {
+        scroll-behavior: smooth;
+    }
+    *{
+        margin:0px;
+        padding:0px;
+        box-sizing:border-box;
+    }
+    @font-face {
+        font-family: "fuentemenu";
+        src:url(../fonts/Helvetica-Bold.ttf);
+        font-weight:bold;
+        font-style:bold;
+    }
+    @font-face {
+        font-family:"fuenteparrafo";
+        src:url(../fonts/Quicksand_Book.otf);
+        font-weight:normal;
+        font-style:normal;
+    }
+    .header {
+        display:flex;
+        justify-content:flex-end;
+        width:100vw;
+        height:15vh;
+        background-color: #d3c2a9;
+        padding:10px;
+        position:fixed;
+        top:0px;
+        left:0px;
+        z-index: 1000;
+    }
+    .menu {
+        background-color: #d3c2a9;
+        font-family: "fuentemenu";
+        font-size:40px;
+        color: white;
+        font-weight:bold;
+        border: none;
+        cursor:pointer;
+        transition: color 0.2s;
+        margin:0 25px;
+        margin-top:5vh;
+    }
+    .menu:hover{
+        color: #6f5e43;
+    }
+    #home, #presentacion, #cursos, #horario, #opiniones {
+        height: 100vh;
+        padding-top: 18vh;
+    }
+    #home{
+        display:flex;
+        width:100vw;
+        background-image:url('../images/fondo_home.jpg');
+        background-size:cover;
+    }
+    #contenedor1{
+        display:flex;
+        flex-direction:column;
+        font-family:"fuentemenu";
+        width:50vw;
+        height:82vh;
+        background-color: transparent ;
+    }
+    #contenedor1 h1{
+        color:white;
+        font-size:50px;
+        margin-left:65px;
+        margin-top:65px;
+    }
+    #contenedor1 ul{
+        color:white;
+        margin-left: 140px;
+        margin-top:20px;
+        font-size: 28px;
+    }
+    #contenedor1 li{
+        margin-top:10px;
+    }
+    #contenedor2{
+        display:flex;
+        flex-direction:column;
+        left:0px;
+        width:50vw;
+        height:82vh;
+        background-color: transparent ;
+    }
+    #cuadradito{
+        width: 200px;
+        height: 150px;
+        background-image:url('../images/logoago.png');
+        background-size:cover;
+        display: flex; 
+        margin-left:10px;
+        margin-top:10px;
+    }
+
+    #contenedor2 p{
+        margin-left:140px;
+        margin-top:60px;
+        margin-right:70px;
+        font-size:24px;
+        font-family:"fuenteparrafo";
+    }
+    #contenedor2 #nose{
+        margin-left:140px;
+        margin-top:35px;
+        margin-right:70px;
+        font-size:24px;
+        font-family:"fuenteparrafo";
+    }
+    #presentacion{
+        display:flex;
+        width:100vw;
+        background-color:white;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    #presentacion-content{
+        display: flex;
+        align-items: flex-start;
+    }
+    #cuadrado{
+        width: 450px;
+        height: 600px;
+        background-color: #d3c2a9;
+        position: relative;
+        display: flex; 
+        align-items: center;
+        margin-left: 100px;
+        margin-top:80px;
+    }
+    #cuadrado #imgsalva {
+        width: 450px;
+        height: 600px;
+        position: absolute;
+        margin: 0;
+        margin-top: 100px;
+        margin-left: 50px;
+        background-image:url('../images/salva.jpg');
+        background-size:cover;
+    }
+    .pimg-container{
+        display: flex;
+        flex-direction: column;
+        margin-top:150px;
+        margin-left: 100px;
+        max-width: 450px;
+        background-color:transparent;
+    }
+    .pimg{
+        color: #6f5e43;
+        font-size: 28px;
+        font-family: "fuenteparrafo";
+        margin-bottom: 30px;
+        margin-right: 130px;
+    }
+    #linea{
+        width:4px;
+        height:60vh;
+        margin-top:130px;
+        background-color:#6f5e43;
+    }
+    #imgcontacto{
+        width: 70px;
+        height: 450px;
+        background-image:url("../images/iconos-contacto.png");
+        background-size:cover;
+        margin-left:80px;
+        margin-top:200px;
+    }
+    .redes{
+        display:flex;
+        color:#6f5e43;
+        margin-top:105px;
+        margin-left:70px;
+        font-family:"fuenteparrafo";
+    }
+    #tfn{
+        margin-top:210px;
+    }
+    #cursos{
+        display:flex;
+        width:100vw;
+        background-color:lightgray;
+    }
+    #horario{
+        display:flex;
+        width:100vw;
+        background-color:white;
+    }
+    #opiniones{
+        display:flex;
+        width:100vw;
+        background-color:lightgray;
+    }
+        @media (max-width: 768px) {
+            .header {
+                display: flex;
+                flex-direction: column; /* Cambiado a columna para apilar logo y menú verticalmente */
+                align-items: center; /* Centrar los elementos horizontalmente */
+                justify-content: flex-start; /* Alinear los elementos al inicio verticalmente */
+                width: 100vw;
+                height: auto;
+                background-color: #d3c2a9;
+                padding: 10px;
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                z-index: 1000;
+            }
+            
+            #cuadradito {
+                width: 100px;
+                height: 75px;
+                background-image: url('../images/logoago.png');
+                background-size: cover;
+                margin-bottom: 10px; /* Separación entre el logo y el menú */
+            }
+            
+            .menu-container {
+                display: flex; /* Hacer que el contenedor del menú sea un flexbox horizontal */
+                justify-content: center; /* Centrar los elementos del menú */
+                width: 100%;
+            }
+            
+            .menu {
+                background-color: #d3c2a9;
+                font-family: "fuentemenu";
+                font-size: 16px;
+                color: white;
+                font-weight: bold;
+                border: none;
+                cursor: pointer;
+                transition: color 0.2s;
+                margin: 0 25px;
+            }
+
+            .menu button{
+                display:flex;
+                justify-content:center;
+            }
+            
+            .menu:hover {
+                color: #6f5e43;
+            }
+            
+    }
