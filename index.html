@@ -6,7 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
+    $(document).ready(function() {
+        $('#b-p1').click(function() {
+            $('#cabeceras p').addClass('hidden').removeClass('slide-in');
+            $('#p1').removeClass('hidden').addClass('slide-in');
+        });
+
+        $('#b-p2').click(function() {
+            $('#cabeceras p').addClass('hidden').removeClass('slide-in');
+            $('#p2').removeClass('hidden').addClass('slide-in');
+        });
+
+        $('#b-p3').click(function() {
+            $('#cabeceras p').addClass('hidden').removeClass('slide-in');
+            $('#p3').removeClass('hidden').addClass('slide-in');
+        });
+
+        $('#b-p4').click(function() {
+            $('#cabeceras p').addClass('hidden').removeClass('slide-in');
+            $('#p4').removeClass('hidden').addClass('slide-in');
+        });
+    });
+
     document.querySelectorAll('.menu').forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
@@ -23,6 +46,9 @@
             });
         });
     });
+
+
+    
   </script>
 </head>
 
@@ -82,8 +108,8 @@
 
                     <!-- Div para los textos de contacto a la derecha -->
                     <div style="display: flex; flex-direction: column; margin-left: 20px;">
-                        <h1 class="redes" id="tfn">1627829576</h1>
-                        <h1 class="redes">agopedagogia@gmail.com</h1>
+                        <a href="tel:+1627829576"><h1 class="redes" id="tfn">1627829576</h1></a>
+                        <a href="mailto:agopedagogia@gmail.com?subject=Consulta&body=Hola,%20me%20interesa%20más%20información."><h1 class="redes">agopedagogia@gmail.com</h1></a>
                         <h1 class="redes"></h1>
                         <h1 class="redes">@agopedagogia</h1>
                     </div>
@@ -94,17 +120,91 @@
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 <div id="servicios">
+    <div id="plan1">
     <div id="plan-individual" class="plan">
         <h1>Plan individual</h1>
         <div id="linea-individual"></div>
         <div id="cabeceras">
-        <button id="b-p1">CONSULTORÍA</button>
-        <p id="p1"></p>
-        <button id="b-p2">INTERVENCIÓN EDUCATIVA</button>
-        <button id="b-p3">ORIENTACIÓN LABORAL</button>
-        <button>TEST Y PRUEBAS PSICOPEDAGÓGICAS</button>
+            <button id="b-p1">CONSULTORÍA</button>
+            <p id="p1" class="hidden">
+                <br>
+                Orientar al usuario desde el punto de vista pedagógico y psicopedagógico.
+                <br><br>
+                Participarán el estudiante, familia, institución, equipo de orientación y docentes.
+                <br><br>
+                Duración de 45 min aproximadamente.
+            </p>
+            <button id="b-p2">INTERVENCIÓN EDUCATIVA</button>
+            <p id="p2" class="hidden">
+                <br>
+                Es un programa con una serie de pasos específicos para ayudar a los estudiantes
+                con sus dificultades. Las intervenciones educativas se enfocan en áreas como
+                lectura o matemáticas. Están diseñadas de manera que puedan dar seguimiento
+                al progreso del estudiante.
+            </p>
+            <button id="b-p3">ORIENTACIÓN LABORAL</button>
+            <p id="p3" class="hidden">
+                <br>
+                Consultoría
+                <br><br>
+                Test y pruebas psicopedagógicas:TDAH, Dislexia, Discalculia, AACC, Trastornos de
+                conducta, Dificultades de aprendizaje.
+                <br><br>
+                Sesión de intervención (45 min).
+                <br><br>
+                Evaluación psicopedagógica: Entrevista personal (familia, centro, departamento de
+                orientación), 3 sesiones de evaluación, informe y plan de intervención.
+                <br><br>
+                Intervención educativa.
+                <br><br>
+                Orientación laboral: preparación de entrevista de trabajo, técnicas de
+                comunicación, configuración de CV.
+            </p>
+            <button id="b-p4">TEST Y PRUEBAS PSICOPEDAGÓGICAS</button>
+            <p id="p4" class="hidden">
+                <br>
+                Valoran las capacidades intelectuales generales, como el razonamiento lógico,
+                verbal y espacial, procesos psicológicos importantes en la adquisición de nuevos
+                conocimientos. Aquellas que valoran las habilidades y estrategias de
+                aprendizaje, como la atención, memoria o imaginación.
+            </p>
         </div>
     </div>
+    <div id="enumerados">
+        <p>
+            1. Recogida de información del usuario
+            <br>
+            <br>
+            <br>
+            2. Realización de test o valoración pertinente
+            <br>
+            <br>
+            <br>
+            3. Devolver diagnóstico junto con las pautas
+            de cada caso
+            <br>
+            <br>
+            <br>
+            4. Tiempo prudencial de espera para decisión
+            el tratamiento pedagógico
+            <br>
+            <br>
+            <br>
+            5. Proponer plan estratégico compuesto por
+            un mínimo de 10 sesiones
+            <br>
+            <br>
+            <br>
+            6. Seguimiento del paciente durante el 1
+            meses posterior (online)
+            <br>
+            <br>
+            <br>
+            7. Fin del tratamiento
+        </p>
+    </div>
+    </div>
+
     <div id="plan-grupal" class="plan">
     
     </div>
