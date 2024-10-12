@@ -18,12 +18,30 @@
         font-weight:normal;
         font-style:normal;
     }
+    .hidden {
+        display: none; /* Oculta el elemento */
+    }
+
+    .slide-in {
+        animation: slide-in 0.5s forwards; /* Animación de deslizamiento */
+    }
+
+    @keyframes slide-in {
+        from {
+            transform: translateX(-50px); /* Empieza fuera del área visible a la izquierda */
+            opacity: 0; /* Comienza invisible */
+        }
+        to {
+            transform: translateX(0); /* Termina en su posición original */
+            opacity: 1; /* Termina visible */
+        }
+    }
     .header {
         display:flex;
         justify-content: space-between; /* Esto alinea el logo a la izquierda y el menú a la derecha */
         align-items: center; /* Alinea verticalmente los elementos */
         width:100vw;
-        height:18vh;
+        height:15vh;
         background-color: #d3c2a9;
         padding:10px;
         position:fixed;
@@ -208,25 +226,33 @@
         align-items: center;
         justify-content: center;
     }
+
+    #plan1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+    }
     #plan-individual {
-        background-image: url('../images/plan-individual.jpg'); /* Ajusta la ruta de la imagen */
-        position: relative; /* Necesario para que los elementos hijos con posición absoluta se alineen con respecto a este contenedor */
+        background-image: url('../images/plan-individual.jpg');
+        position: relative;
+        margin-top:-3vh;
     }
     
     #plan-individual h1 {
-        position: absolute; /* Para posicionarlo en un lugar específico del contenedor */
-        top: 80px; /* Ajusta la distancia desde la parte superior del contenedor */
-        left: 80px; /* Ajusta la distancia desde el borde derecho del contenedor */
+        position: absolute;
+        top: 80px;
+        left: 80px;
         color: white;
         font-family: "fuentemenu";
-        font-size: 52px;
-        margin: 0; /* Elimina márgenes predeterminados del h1 */
+        font-size: 48px;
+        margin: 0;
     }
     #linea-individual{
         position: absolute;
         width:5px;
         height:65vh;
-        margin-top:30px;
+        margin-top:-30px;
         left:100px;
         background-color: white;
     }
@@ -238,23 +264,41 @@
         left: 140px; 
     }
     #cabeceras button {
-        margin-top:128px;
+        margin-top:50px;
         text-align:left;
-        font-size: 32px;
-        font-family: "fuentemenu";
+        font-size: 24px;
+        font-family: "fuenteparrafo";
         color:white;
+        font-weight:bold;
         border: none;
         cursor:pointer;
         transition: color 0.2s;
         background-color:transparent;
     }
-
     #cabeceras button:hover {
-        color: #d3c2a9;
+        color: #d3c2aa;
     }
-
+    #cabeceras p{
+        width:50vh;
+        color:white;
+        font-family:"fuenteparrafo";
+        font-size:20px;
+    }
+    #p1{
+        height:15vh;
+    }
+    #enumerados {
+    flex: 0 0 30%; /* Este div ocupará un 30% del espacio disponible */
+    padding: 10px; /* Opcional: agrega algo de relleno */
+    border: 1px solid #d3c2a9; /* Opcional: un borde para mejor visualización */
+    font-family:"fuenteparrafo";
+    font-size:28px;
+    margin-right:5vw;
+    margin-top:4vh;;
+    color:#6f5e43;
+}
     #plan-grupal {
-        background-image: url('../images/plan-grupal.jpg'); /* Ajusta la ruta de la imagen */
+        background-image: url('../images/plan-grupal.jpg');
     }
 
     /* ---------------------------------------------------------------------- */
