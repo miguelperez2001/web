@@ -70,8 +70,8 @@
         padding-top: 18vh;
     }
     #logoago{
-        width: 10vw;
-        height: 15vh;
+        width: 9vw;
+        height: 14vh;
         background-image:url('../images/logoago.png');
         background-size:cover;
         display: flex; 
@@ -196,38 +196,54 @@
         color: #6f5e43;
         font-size: 1.32vw;
         font-family: "fuenteparrafo";
-        margin-bottom: 5%;
+        margin-bottom: 5vh;
         margin-right: 0; /* Eliminamos el margen derecho para evitar desbordamientos */
     }
     
     #linea {
-        width: 0.2%;
+        width: 0.2vw;
         height: 60vh;
         margin-top: 16%;
         margin-left:5%;
         background-color: #6f5e43;
     }
     
-    #imgcontacto {
-        width: 5.5vw;
-        height:45vh;
-        background-image: url("../images/iconos-contacto.png");
-        background-size: cover;
-        margin-left: 6%; /* Ajustado para evitar desbordes */
-        margin-top: 60%;
-    }
-    
-    .redes {
+    #contacto {
         display: flex;
-        color: #6f5e43;
-        margin-top: 22%;
-        margin-left: 7%; /* Ajuste para centrar mejor */
-        font-family: "fuenteparrafo";
-        font-size:1.7vw;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 40vh;
+        margin-left:3vw;
     }
     
-
-
+    .contacto-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 4vh; /* Espacio entre cada fila */
+    }
+    
+    .contacto-item img {
+        width: 4vw; /* Ajusta el tamaño del ícono */
+        height: auto;
+        margin-right: 2vw; /* Espacio entre el ícono y el texto */
+    }
+   .redes{
+    border: none;
+    cursor:pointer;
+    transition: color 0.2s;
+    background-color:transparent;
+   } 
+    .redes a {
+        text-decoration: none;
+        color: #6f5e43;
+        font-family: "fuenteparrafo";
+        font-size: 2vw;
+        font-weight:bold;
+    }
+    .redes a:hover {
+        color: #d3c2a9;
+    }
+    
     /* ---------------------------------------------------------------------- */
 
     #servicios {
@@ -309,16 +325,46 @@
         height:18vh;
     }
     #enumerados {
-    flex: 0 0 30%; /* Este div ocupará un 30% del espacio disponible */
-    padding: 1%; /* Opcional: agrega algo de relleno */
-    font-family:"fuenteparrafo";
-    font-size:1.5vw;
-    margin-right:5vw;
-    margin-top:2vh;;
-    color:#6f5e43;
-}
+        flex: 0 0 30%;
+        padding: 1%;
+        font-family: "fuenteparrafo";
+        font-size: 1.5vw;
+        margin-right: 5vw;
+        margin-top: 2vh;
+        color: #6f5e43;
+    }
+
+    #plan2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100vw;
+        height:100vh;
+    }
     #plan-grupal {
         background-image: url('../images/plan-grupal.jpg');
+        display:flex;
+        width:60vw;
+        margin-left:40vw;
+        flex-direction:column;
+        align-items:flex-start;
+    }
+    .cuadros {
+        border: 2px solid white;
+        border-radius: 20px;
+        padding: 10px;
+        text-align:left;
+        color:white;
+        width:30vw;
+        font-family:"fuenteparrafo";
+        margin-left:30%;
+        margin-bottom:10%;
+    }
+    .cuadros h1{
+        font-size:2vw;
+    }
+    .cuadros p{
+        font-size:1vw;
     }
 
     /* ---------------------------------------------------------------------- */
@@ -334,7 +380,7 @@
     #opiniones{
         display:flex;
         width:100vw;
-        background-color:lightgray;
+        background-color:white;
     }
 }
     /* ---------------------------------------------------------------------- */
@@ -445,7 +491,6 @@
             margin-top: 5%;
             margin-left: 0;
         }
-    }
     
         .redes{
             display:flex;
