@@ -1,0 +1,557 @@
+    html {
+        scroll-behavior: smooth;
+    }
+    *{
+        margin:0px;
+        padding:0px;
+        box-sizing:border-box;
+    }
+    @font-face {
+        font-family: "fuentemenu";
+        src:url(../fonts/Helvetica-Bold.ttf);
+        font-weight:bold;
+        font-style:bold;
+    }
+    @font-face {
+        font-family:"fuenteparrafo";
+        src:url(../fonts/Quicksand_Book.otf);
+        font-weight:normal;
+        font-style:normal;
+    }
+    .hidden {
+        display: none; /* Oculta el elemento */
+    }
+
+    .slide-in {
+        animation: slide-in 0.5s forwards; /* Animación de deslizamiento */
+    }
+
+    @keyframes slide-in {
+        from {
+            transform: translateX(-50px); /* Empieza fuera del área visible a la izquierda */
+            opacity: 0; /* Comienza invisible */
+        }
+        to {
+            transform: translateX(0); /* Termina en su posición original */
+            opacity: 1; /* Termina visible */
+        }
+    }
+@media (min-width:991px){
+    .header {
+        display:flex;
+        justify-content: space-between; /* Esto alinea el logo a la izquierda y el menú a la derecha */
+        align-items: center; /* Alinea verticalmente los elementos */
+        width:100vw;
+        height:15vh;
+        background-color: #d3c2a9;
+        padding:1%;
+        position:fixed;
+        top:0%;
+        left:0%;
+        z-index: 1000;
+    }
+    .menu {
+        background-color: #d3c2a9;
+        font-family: "fuentemenu";
+        font-size:1.7vw;
+        color: white;
+        font-weight:bold;
+        border: none;
+        cursor:pointer;
+        transition: color 0.2s;
+        margin:0 25px;
+        margin-top:0vh;
+    }
+    .menu:hover{
+        color: #6f5e43;
+    }
+    #home, #presentacion, #servicios, #horario, #opiniones {
+        height: 100vh;
+        padding-top: 18vh;
+    }
+    #logoago{
+        width: 9vw;
+        height: 14vh;
+        background-image:url('../images/logoago.png');
+        background-size:cover;
+        display: flex; 
+        margin-left:3%;
+        margin-top:-1%;
+    }
+
+
+    /* ---------------------------------------------------------------------- */
+
+
+    #home{
+        display:flex;
+        width:100vw;
+        background-image:url('../images/fondo_home.jpg');
+        background-size:100vw 100vh;
+    }
+    #contenedor1{
+        display:flex;
+        flex-direction:column;
+        font-family:"fuentemenu";
+        width:50vw;
+        height:82vh;
+        background-color: transparent ;
+    }
+    #contenedor1 h1{
+        color:white;
+        font-size:2vw;
+        margin-left:6.5%;
+        margin-top:6.5%;
+    }
+    #contenedor1 ul{
+        color:white;
+        margin-left: 14%;
+        margin-top:2%;
+        font-size: 1.5vw;
+    }
+    #contenedor1 li{
+        margin-top:2%;
+    }
+    #contenedor2{
+        display:flex;
+        flex-direction:column;
+        left:0%;
+        width:50vw;
+        height:82vh;
+        background-color: transparent ;
+    }
+
+    #contenedor2 p{
+        margin-left:15%;
+        margin-top:8%;
+        margin-right:7%;
+        font-size:1.3vw;
+        font-family:"fuenteparrafo";
+    }
+    #contenedor2 #nose{
+        margin-left:15%;
+        margin-top:3.5%;
+        margin-right:7%;
+        font-size:1.3vw;
+        font-family:"fuenteparrafo";
+    }
+
+
+    /* ---------------------------------------------------------------------- */
+
+
+    #presentacion {
+        display: flex;
+        width: 100vw; /* Mantener 100% del ancho de la ventana */
+        background-color: white;
+        align-items: flex-start;
+        justify-content: flex-start;
+        box-sizing: border-box; /* Incluir márgenes y padding en el ancho total */
+        padding: 0 2vw; /* Añadir un pequeño padding para evitar que los elementos toquen los bordes */
+    }
+    
+    #presentacion-content {
+        display: flex;
+        align-items: flex-start;
+        width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    }
+    #presentacion-content h1{
+        margin-top:22%;
+    }
+    
+    #cuadrado {
+        width: 23vw; /* Ajuste de ancho para asegurar que no desborde */
+        height: 57vh;
+        background-color: #d3c2a9;
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-left: 2%; /* Reducido para ajustar dentro del 100% */
+        margin-top: 14%;
+    }
+    
+    #cuadrado #imgsalva {
+        width: 23vw;
+        height: 60vh;
+        position: absolute;
+        margin: 0;
+        margin-top: 20%;
+        margin-left: 8%;
+        background-image: url('../images/salva.jpg');
+        background-size: cover;
+    }
+    
+    .pimg-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20%;
+        margin-left: 5%; /* Ajuste para reducir espacio sobrante */
+        max-width: 20vw;
+        max-height: 40vh;
+        background-color: transparent;
+        box-sizing: border-box; /* Asegurar que el margen no desborde */
+    }
+    
+    .pimg {
+        color: #6f5e43;
+        font-size: 1.32vw;
+        font-family: "fuenteparrafo";
+        margin-bottom: 5vh;
+        margin-right: 0; /* Eliminamos el margen derecho para evitar desbordamientos */
+    }
+    
+    #linea-v {
+        width: 0.2vw;
+        height: 60vh;
+        margin-top: 16%;
+        margin-left:5%;
+        background-color: #6f5e43;
+    }
+    
+    #contacto {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 40vh;
+        margin-left:3vw;
+    }
+    
+    .contacto-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 4vh; /* Espacio entre cada fila */
+    }
+    
+    .contacto-item img {
+        width: 4vw; /* Ajusta el tamaño del ícono */
+        height: auto;
+        margin-right: 2vw; /* Espacio entre el ícono y el texto */
+    }
+   .redes{
+    border: none;
+    cursor:pointer;
+    transition: color 0.2s;
+    background-color:transparent;
+   } 
+    .redes a {
+        text-decoration: none;
+        color: #6f5e43;
+        font-family: "fuenteparrafo";
+        font-size: 2vw;
+        font-weight:bold;
+    }
+    .redes a:hover {
+        color: #d3c2a9;
+    }
+    
+    /* ---------------------------------------------------------------------- */
+
+    #servicios {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        background-color: white;
+        height:300vh;
+    }
+    .plan {
+        position: relative;
+        width: 60vw;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #plan1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+    }
+    #plan-individual {
+        background-image: url('../images/plan-individual.jpg');
+        position: relative;
+        margin-top:-3vh;
+    }
+    
+    #plan-individual h1 {
+        position: absolute;
+        top: 8%;
+        left: 8%;
+        color: white;
+        font-family: "fuentemenu";
+        font-size: 2.1vw;
+        margin: 0;
+    }
+    #linea-individual{
+        position: absolute;
+        width:0.5%;
+        height:78vh;
+        margin-top:7%;
+        left:9%;
+        background-color: white;
+    }
+    #cabeceras {
+        display:flex;
+        position: absolute;
+        flex-direction:column;
+        top: 12%; 
+        left: 13%; 
+    }
+    #cabeceras button {
+        margin-top:10%;
+        text-align:left;
+        font-size: 1.2vw;
+        font-family: "fuenteparrafo";
+        color:white;
+        font-weight:bold;
+        border: none;
+        cursor:pointer;
+        transition: color 0.2s;
+        background-color:transparent;
+    }
+    #cabeceras button:hover {
+        color: #d3c2aa;
+    }
+    #cabeceras p{
+        width:50vh;
+        color:white;
+        font-family:"fuenteparrafo";
+        font-size:1vw;
+    }
+    #p1{
+        height:18vh;
+    }
+    #enumerados {
+        flex: 0 0 30%;
+        padding: 1%;
+        font-family: "fuenteparrafo";
+        font-size: 1.4vw;
+        margin-right: 5vw;
+        margin-top: 1vh;
+        color: #6f5e43;
+    }
+
+    #plan2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100vw;
+        height:100vh;
+    }
+    #box {
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        width:40vw;
+    }
+    #cabecera h1{
+        color:#6f5e43;
+        font-family:"fuentemenu";
+        font-size:2.5vw;
+        margin-top:10%;
+        margin-left:10%;
+        white-space:nowrap;
+    }
+    #cabecera h2{
+        color:#6f5e43;
+        font-family:"fuenteparrafo";
+        font-size:1.5vw;
+        margin-top:1.5%;
+        margin-left:10%;
+        white-space:nowrap;
+    }
+    .titulo{
+        margin-top:6%;
+        margin-left:10%;
+        font-family:"fuenteparrafo";
+        font-size:1.2vw;
+        color:#6f5e43;
+        font-weight:bold;
+    }
+    .linea{
+        width:14vw;
+        height:0.3vh;
+        background-color: #6f5e43;
+    }
+    .programas .parrafo{
+        margin-top:2%;
+        margin-bottom:2%;
+        margin-left:12%;
+        font-family:"fuenteparrafo";
+        font-size:1vw;
+        color:#6f5e43;
+    }
+
+    #plan-grupal {
+        background-image: url('../images/plan-grupal.jpg');
+        display:flex;
+        width:60vw;
+        flex-direction:column;
+        align-items:flex-start;
+    }
+    .cuadros {
+        border: 2px solid white;
+        border-radius: 20px;
+        padding: 10px;
+        text-align:left;
+        color:white;
+        width:30vw;
+        font-family:"fuenteparrafo";
+        margin-left:30%;
+        margin-bottom:10%;
+    }
+    .cuadros h1{
+        font-size:2vw;
+    }
+    .cuadros p{
+        font-size:1vw;
+    }
+
+    #plan-mensual img{
+        width:100vw;
+        hight:100vh;
+        margin-top:-20vh;
+    }
+
+    /* ---------------------------------------------------------------------- */
+
+    #horario{
+        display:flex;
+        width:100vw;
+        background-color:white;
+    }
+
+    /* ---------------------------------------------------------------------- */
+
+    #opiniones{
+        display:flex;
+        width:100vw;
+        background-color:white;
+    }
+}
+    /* ---------------------------------------------------------------------- */
+
+    @media (max-width: 768px) {
+        .header {
+            display: flex;
+            flex-direction: column; /* Columna para apilar logo y menú */
+            align-items: center;
+            justify-content: flex-start;
+            width: 100vw;
+            height: 15vh;
+            background-color: #d3c2a9;
+            padding: 10px;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 1000;
+        }
+    
+        #cuadradito {
+            width: 100px;
+            height: 75px;
+            background-image: url('../images/logoago.png');
+            background-size: cover;
+            margin-bottom: 0px; /* Separación entre el logo y el menú */
+            margin-top: -20px;
+        }
+    
+        .menu-container {
+            display: flex;
+            justify-content: space-around; /* Asegura igual espacio entre los botones */
+            width: 80%;
+        }
+    
+        .menu {
+            flex-grow: 1; /* Hacer que cada botón ocupe el mismo espacio */
+            background-color: #d3c2a9;
+            font-family: "fuentemenu";
+            font-size: 16px;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: color 0.2s;
+            margin: 0 4px; /* Menor margen entre los botones */
+            margin-top:20px;
+            text-align: center; /* Alinear el texto de los botones */
+        }
+    
+        .menu:hover {
+            color: #6f5e43;
+        }
+    
+        #contenedor1{
+            width:100vw;
+            margin-left:-50px;
+            margin-top:-60px;
+        }
+        #contenedor1 h1{
+            color:white;
+            font-size:24px;
+        }
+        #contenedor1 ul{
+            color:white;
+            font-size: 16px;
+        }
+
+        #contenedor2{
+            display:none;
+        }
+
+        #presentacion{
+            flex-direction: column;
+        }
+        #cuadrado{
+            width: 200px;
+            height: 300px;
+            background-color: #d3c2a9;
+            position: relative;
+            display: flex; 
+            align-items: center;
+            margin-left: 70px;
+            margin-top:-30px;
+        }
+        #cuadrado #imgsalva {
+            width: 200px;
+            height: 300px;
+            position: absolute;
+            margin: 0;
+            margin-top: 70px;
+            margin-left: 30px;
+            background-image:url('../images/salva.jpg');
+            background-size:cover;
+        }
+        #imgcontacto {
+            width: 40vw; /* Cambia el tamaño de la imagen en pantallas más pequeñas */
+            height: auto; /* Permitir que el alto se ajuste automáticamente */
+            margin-top: 20%; /* Ajustar márgenes */
+            margin-left: 0; /* Eliminar el margen izquierdo para evitar desplazamientos */
+        }
+    
+        #linea {
+            display: none; /* Puedes ocultar o reducir algunos elementos si es necesario */
+        }
+    
+        .pimg-container {
+            margin-top: 5%;
+            margin-left: 0;
+        }
+    
+        .redes{
+            display:flex;
+            color:#6f5e43;
+            margin-top:105px;
+            margin-left:70px;
+            font-family:"fuenteparrafo";
+        }
+        #tfn{
+            margin-top:210px;
+        }
+        #horario{
+            display:none;
+        }
+    }
