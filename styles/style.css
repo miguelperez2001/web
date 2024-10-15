@@ -65,7 +65,7 @@
     .menu:hover{
         color: #6f5e43;
     }
-    #home, #presentacion, #servicios, #horario, #opiniones {
+    #home, #presentacion, #servicios, #horario{
         height: 100vh;
         padding-top: 18vh;
     }
@@ -426,9 +426,11 @@
 
     /* ---------------------------------------------------------------------- */
 
-    #horario{
+    #horario img{
         display:flex;
         width:100vw;
+        hight:auto;
+        margin-top:-18vh;
         background-color:white;
     }
 
@@ -454,7 +456,7 @@
             flex-direction:column;
             align-items: center; /* Alinea verticalmente los elementos */
             width:100vw;
-            height:16vh;
+            height:18vh;
             background-color: #d3c2a9;
             padding:1%;
             position:sticky;
@@ -468,6 +470,9 @@
             justify-content: center;
             width: 100vw;
             margin-top: -4.3vh;
+        }
+        .menu-container a {
+            text-decoration: none;
         }
         .menu {
             background-color: #d3c2a9;
@@ -837,8 +842,8 @@
         }
         .cuadros h1{
             font-size:3vw;
+            text-align:center;
             margin-top:1.5vh;
-            margin-left:2vw;
             margin-bottom:1.5vh;
         }
     
